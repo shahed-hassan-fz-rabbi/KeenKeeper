@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Card from "../card/Card";
+import { IoMdAdd } from "react-icons/io";
 
 const HomePage = () => {
 
@@ -50,7 +51,7 @@ const HomePage = () => {
         </p>
 
         <button className="btn bg-[#244D3F] text-white px-6 mt-3">
-          + Add a Friend
+          <IoMdAdd />Add a Friend
         </button>
       </div>
 

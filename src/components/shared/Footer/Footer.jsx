@@ -7,9 +7,10 @@ const Footer = () => {
   return (
     <footer className="bg-[#244D3F] text-white px-6 py-10 mt-10">
       
-      {/* Top Section */}
+     
       <div className="max-w-5xl mx-auto text-center space-y-4">
-        <h1 className="text-3xl font-bold">KeenKeeper</h1>
+        <h1 className="text-6xl font-bold">KeenKeeper</h1>
+      
         <p className="text-sm opacity-80">
           Your personal shelf of meaningful connections. Browse, tend, and nurture the relationships that matter most.
         </p>

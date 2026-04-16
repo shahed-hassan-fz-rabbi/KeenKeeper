@@ -7,6 +7,7 @@ import HomePage from "../HomePage/HomePage";
 import Timeline from "../Timeline/Timeline";
 import Stats from "../stats/Stats";
 import ShowDetails from "../ShowDetails/ShowDetails";
+import ErrorPage from "../ErrorPage/ErrorPage";
 
 
 export const router = createBrowserRouter([
@@ -32,9 +33,14 @@ export const router = createBrowserRouter([
         {
             path:"/friend/:id",
             element: <ShowDetails />
-        }
+        },
 
     ]
+},
+
+{
+    path: "*",
+    element: <ErrorPage />
 }
 
 ]);

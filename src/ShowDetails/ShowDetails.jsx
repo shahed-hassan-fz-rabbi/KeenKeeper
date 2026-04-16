@@ -43,7 +43,7 @@ const ShowDetails = () => {
 
   
   localStorage.setItem("timeline", JSON.stringify([newEntry, ...existing]));
-   toast.success(`${type} added to timeline`);
+   toast.success(`${type} With ${friend.name}`);
 
   
   //alert(`${type} added to timeline`);
@@ -170,7 +170,7 @@ const ShowDetails = () => {
               <span className="text-xs mt-1">Text</span>
             </button>
 
-            <button onClick={() => handleAction("Video Call")} className="border rounded-xl py-5 flex flex-col items-center hover:bg-gray-100">
+            <button onClick={() => handleAction("Video")} className="border rounded-xl py-5 flex flex-col items-center hover:bg-gray-100">
               <FiVideo size={18} />
               <span className="text-xs mt-1">Video Call</span>
             </button>
