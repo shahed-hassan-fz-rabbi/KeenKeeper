@@ -6,6 +6,7 @@ import MainLayout from "../Layout/MainLayout";
 import HomePage from "../HomePage/HomePage";
 import Timeline from "../Timeline/Timeline";
 import Stats from "../stats/Stats";
+import ShowDetails from "../ShowDetails/ShowDetails";
 
 
 export const router = createBrowserRouter([
@@ -26,6 +27,11 @@ export const router = createBrowserRouter([
         {
             path : "stats",
             element: <Stats/>
+        },
+
+        {
+            path:"/friend/:id",
+            element: <ShowDetails />
         }
 
     ]
