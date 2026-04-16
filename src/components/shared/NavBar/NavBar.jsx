@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FiHome, FiClock, FiBarChart2 } from "react-icons/fi";
 import Logo from "../../../assets/logo.png"
 
@@ -10,7 +10,7 @@ const NavBar = () => {
         <NavLink
           to="/"
           className={({ isActive }) =>
-            `btn btn-sm flex items-center gap-1 ${
+            `btn btn-sm flex items-center gap-1 hover:shadow-lg ${
               isActive
                 ? "bg-[#244D3F] text-white"
                 : "bg-white text-black"
@@ -26,7 +26,7 @@ const NavBar = () => {
         <NavLink
           to="/timeline"
           className={({ isActive }) =>
-            `btn btn-sm flex items-center gap-1 ${
+            `btn btn-sm flex items-center gap-1 hover:shadow-lg ${
               isActive
                 ? "bg-[#244D3F] text-white"
                 : "bg-white text-black"
@@ -42,7 +42,7 @@ const NavBar = () => {
         <NavLink
           to="/stats"
           className={({ isActive }) =>
-            `btn btn-sm flex items-center gap-1 ${
+            `btn btn-sm flex items-center gap-1 hover:shadow-lg ${
               isActive
                 ? "bg-[#244D3F] text-white"
                 : "bg-white text-black"
@@ -74,10 +74,14 @@ const NavBar = () => {
           </ul>
         </div>
 
-        <a className="text-xl font-bold pl-3 text-[#1F2937]">
+
+            <Link to="/">
+           
           
-          <img src={Logo} alt="" />
-        </a>
+             <img src={Logo} alt="" />
+           
+            </Link>
+        
       </div>
 
      

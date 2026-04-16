@@ -14,7 +14,7 @@ const Card = ({ friend }) => {
 
     <Link to={`/friend/${friend.id}`}>
 
-    <div className="bg-white rounded-xl shadow p-5 text-center cursor-pointer">
+    <div className="bg-white rounded-xl shadow p-5 text-center cursor-pointer hover:shadow-lg hover:scale-105 transition duration-300">
 
       <img
         src={picture}

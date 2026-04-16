@@ -1,16 +1,59 @@
-# React + Vite
+# KeenKeeper
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+KeenKeeper is a simple web app where I can keep track of my friends and stay connected with them regularly. The main idea of this project is to manage relationships better by reminding myself when I last contacted someone and when I should reach out again.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About This Project
 
-## React Compiler
+In this project, I tried to build something useful for daily life. It helps me see all my friends in one place, track interactions like calls or messages, and visualize my activity through charts.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## Technologies I Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* React
+* React Router
+* Tailwind CSS
+* DaisyUI
+* Recharts
+* React Icons
+* LocalStorage
+
+---
+
+## Key Features
+
+### 1. Friend Tracking
+
+I can see all my friends with their current status like on-track, overdue, or almost due. Everything is loaded from a JSON file and shown dynamically.
+
+### 2. Interaction Timeline
+
+Whenever I click Call, Text, or Video, it gets saved and shows up in the timeline. I also added a filter option to view specific types of interactions.
+
+### 3. Stats & Analytics
+
+There is a stats page where I used a pie chart to show how many calls, texts, and video interactions I’ve made. It updates automatically based on my activity.
+
+---
+
+GitHub And Live Link:
+
+```bash
+git clone https://github.com/shahed-hassan-fz-rabbi/KeenKeeper
+
+Live Link : 
+```
+
+---
+
+## Notes
+
+I tried to keep the UI clean and simple. Also made sure routing works properly so reloading pages doesn’t break the app.
+
+---
+
+## Author
+
+This project was built by Shahed hassan Fz Rabbi

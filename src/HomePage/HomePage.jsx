@@ -57,22 +57,22 @@ const HomePage = () => {
 
       <div className="max-w-5xl mx-auto mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
 
-        <div className="bg-white rounded-xl shadow p-6 text-center">
+        <div className="bg-white rounded-xl shadow p-6 text-center hover:shadow-lg">
           <h3 className="text-2xl font-bold text-[#244D3F]">{totalFriends}</h3>
           <p className="text-sm text-gray-500 mt-1">Total Friends</p>
         </div>
 
-        <div className="bg-white rounded-xl shadow p-6 text-center">
+        <div className="bg-white rounded-xl shadow p-6 text-center hover:shadow-lg">
           <h3 className="text-2xl font-bold text-[#244D3F]">{onTrack}</h3>
           <p className="text-sm text-gray-500 mt-1">On Track</p>
         </div>
 
-        <div className="bg-white rounded-xl shadow p-6 text-center">
+        <div className="bg-white rounded-xl shadow p-6 text-center hover:shadow-lg">
           <h3 className="text-2xl font-bold text-[#244D3F]">{needAttention}</h3>
           <p className="text-sm text-gray-500 mt-1">Need Attention</p>
         </div>
 
-        <div className="bg-white rounded-xl shadow p-6 text-center">
+        <div className="bg-white rounded-xl shadow p-6 text-center hover:shadow-lg">
           <h3 className="text-2xl font-bold text-[#244D3F]">{timelineCount}</h3>
           <p className="text-sm text-gray-500 mt-1">Interactions This Month</p>
         </div>

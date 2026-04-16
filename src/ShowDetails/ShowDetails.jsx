@@ -34,10 +34,16 @@ const ShowDetails = () => {
     id: Date.now(),
     type: type,
     name: friend.name,
-    date: new Date().toLocaleDateString(),
+    
+    date: new Date().toLocaleDateString("en-US", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    }),
     title: `${type} with ${friend.name}`
   };
 
+//   localStorage.removeItem("timeline");
  
   const existing = JSON.parse(localStorage.getItem("timeline")) || [];
 
@@ -113,7 +119,7 @@ const ShowDetails = () => {
       </div>
 
      
-      <div className="md:col-span-8 space-y-4">
+      <div className="md:col-span-8 space-y-9">
 
        
         <div className="grid grid-cols-3 gap-4">
@@ -143,7 +149,7 @@ const ShowDetails = () => {
         <div className="bg-white rounded-xl px-5 py-4 shadow-sm flex justify-between items-center">
           <div>
             <h3 className="text-sm font-semibold">Relationship Goal</h3>
-            <p className="text-xs text-gray-500">
+            <p className="text-xs text-gray-500 py-3">
               Connect every{" "}
               <span className="font-semibold">{friend.goal}</span> days
             </p>

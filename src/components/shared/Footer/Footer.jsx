@@ -30,7 +30,7 @@ const Footer = () => {
       </div>
 
       
-      <div className="divider border-[#848484]"></div>
+      <div className="divider h-[0.5px] bg-[#698276]"></div>
 
      
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-sm">
