@@ -3,16 +3,37 @@ import Card from "../card/Card";
 
 const HomePage = () => {
 
-    const [friends, setFriends] =useState([]);
+    const [friends, setFriends] = useState([]);
+    const [timelineCount, setTimelineCount] = useState(0);
 
-    useEffect(()=> {
+        useEffect(() => {
         fetch("/friends.json")
-        .then(res => res.json())
-        .then(data => setFriends(data));
+            .then(res => res.json())
+            .then(data => setFriends(data));
+        }, []);
 
-    }, []);
+
+        const totalFriends = friends.length;
+
+        const onTrack = friends.filter(f => f.status === "on-track").length;
+
+        const needAttention = friends.filter(
+        f => f.status === "overdue" || f.status === "almost due"
+        ).length;
 
 
+        useEffect(() => {
+            const stored = JSON.parse(localStorage.getItem("timeline")) || [];
+
+            const currentMonth = new Date().getMonth();
+
+            const count = stored.filter(item => {
+                const itemDate = new Date(item.date).getMonth();
+                return itemDate === currentMonth;
+            }).length;
+
+            setTimelineCount(count);
+            }, []);
 
   return (
     <div className="bg-[#F5F7F6] py-16 px-4">
@@ -36,22 +57,22 @@ const HomePage = () => {
       <div className="max-w-5xl mx-auto mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
 
         <div className="bg-white rounded-xl shadow p-6 text-center">
-          <h3 className="text-2xl font-bold text-[#244D3F]">10</h3>
+          <h3 className="text-2xl font-bold text-[#244D3F]">{totalFriends}</h3>
           <p className="text-sm text-gray-500 mt-1">Total Friends</p>
         </div>
 
         <div className="bg-white rounded-xl shadow p-6 text-center">
-          <h3 className="text-2xl font-bold text-[#244D3F]">3</h3>
+          <h3 className="text-2xl font-bold text-[#244D3F]">{onTrack}</h3>
           <p className="text-sm text-gray-500 mt-1">On Track</p>
         </div>
 
         <div className="bg-white rounded-xl shadow p-6 text-center">
-          <h3 className="text-2xl font-bold text-[#244D3F]">6</h3>
+          <h3 className="text-2xl font-bold text-[#244D3F]">{needAttention}</h3>
           <p className="text-sm text-gray-500 mt-1">Need Attention</p>
         </div>
 
         <div className="bg-white rounded-xl shadow p-6 text-center">
-          <h3 className="text-2xl font-bold text-[#244D3F]">12</h3>
+          <h3 className="text-2xl font-bold text-[#244D3F]">{timelineCount}</h3>
           <p className="text-sm text-gray-500 mt-1">Interactions This Month</p>
         </div>
 

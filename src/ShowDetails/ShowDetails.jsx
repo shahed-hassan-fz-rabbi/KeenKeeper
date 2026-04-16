@@ -4,6 +4,8 @@ import { FiPhone, FiMessageSquare, FiVideo } from "react-icons/fi";
 import { MdOutlineArchive } from "react-icons/md";
 import { LuAlarmClock } from "react-icons/lu";
 import { RiDeleteBin6Line } from "react-icons/ri";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ShowDetails = () => {
   const { id } = useParams();
@@ -41,12 +43,17 @@ const ShowDetails = () => {
 
   
   localStorage.setItem("timeline", JSON.stringify([newEntry, ...existing]));
+   toast.success(`${type} added to timeline`);
 
   
-  alert(`${type} added to timeline`);
+  //alert(`${type} added to timeline`);
+  //const notify = (type) => toast(${type});
+  
+
 };
 
   return (
+    <>
     <div className="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-12 gap-6">
 
       
@@ -153,7 +160,7 @@ const ShowDetails = () => {
 
           <div className="grid grid-cols-3 gap-3">
 
-            <button onClick={() => handleAction("Call")} className="border rounded-xl py-5 flex flex-col items-center hover:bg-gray-100">
+            <button onClick=  {() => handleAction("Call")} className="border rounded-xl py-5 flex flex-col items-center hover:bg-gray-100">
               <FiPhone size={18} />
               <span className="text-xs mt-1">Call</span>
             </button>
@@ -163,17 +170,21 @@ const ShowDetails = () => {
               <span className="text-xs mt-1">Text</span>
             </button>
 
-            <button onClick={() => handleAction("Video")} className="border rounded-xl py-5 flex flex-col items-center hover:bg-gray-100">
+            <button onClick={() => handleAction("Video Call")} className="border rounded-xl py-5 flex flex-col items-center hover:bg-gray-100">
               <FiVideo size={18} />
-              <span className="text-xs mt-1">Video</span>
+              <span className="text-xs mt-1">Video Call</span>
             </button>
 
           </div>
         </div>
 
       </div>
+      
     </div>
+    <ToastContainer position="top-right" autoClose={2000} />
+    </>
   );
 };
+
 
 export default ShowDetails;

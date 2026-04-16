@@ -33,7 +33,7 @@ const Timeline = () => {
           <option>All</option>
           <option>Call</option>
           <option>Text</option>
-          <option>Video</option>
+          <option>Video Call</option>
         </select>
       </div>
 
@@ -54,7 +54,7 @@ const Timeline = () => {
                 <div className="text-lg">
                   {item.type === "Call" && <FiPhone />}
                   {item.type === "Text" && <FiMessageSquare />}
-                  {item.type === "Video" && <FiVideo />}
+                  {item.type === "Video Call" && <FiVideo />}
                 </div>
 
                
