@@ -43,7 +43,7 @@ GitHub And Live Link:
 ```bash
 git clone https://github.com/shahed-hassan-fz-rabbi/KeenKeeper
 
-Live Link : 
+Live Link : https://transcendent-melomakarona-4969c1.netlify.app/
 ```
 
 ---
@@ -56,4 +56,4 @@ I tried to keep the UI clean and simple. Also made sure routing works properly s
 
 ## Author
 
-This project was built by Shahed hassan Fz Rabbi
+This project was built by @Shahed-hassan-Fz-Rabbi
