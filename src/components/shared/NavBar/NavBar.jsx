@@ -1,17 +1,41 @@
-import React from "react";
+
 import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
+
+  
+
   const navLinks = (
     <>
       <li>
-        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/"
+       className={ ({ isActive }) =>
+      `btn  btn-sm ${
+        isActive ? "bg-[#244D3F] text-white": "bg-white text-black" 
+      }`
+      }
+        >Home</NavLink>
       </li>
       <li>
-        <NavLink to="/all-books">Listed Books</NavLink>
+        <NavLink to="/timeline"
+        className={({isActive})=>
+          `btn btn-sm ${
+            isActive ? "bg-[#244D3F] text-white": "bg-white text-black"
+          }`
+        
+        
+        }
+        >Timeline</NavLink>
       </li>
       <li>
-        <NavLink to="/">Page to Reload</NavLink>
+        <NavLink to="/stats"
+        className={({isActive})=>
+          `bg bg-sm ${
+            isActive ? "bg-[#244D3f] text-white" : "bg-white text-black"
+          }`
+        }
+        
+        >Stats</NavLink>
       </li>
     </>
   );
@@ -47,17 +71,15 @@ const NavBar = () => {
           </ul>
         </div>
 
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a className="text-xl font-bold text-[#1F2937]">Keep<span className="text-[#244D3F]">Keepers</span></a>
       </div>
 
       {/* CENTER */}
-      <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
-      </div>
+      
 
       {/* RIGHT */}
       <div className="navbar-end">
-        <a className="btn">Button</a>
+       <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
     </div>
   );
