@@ -42,7 +42,7 @@ const NavBar = () => {
 
   return (
     <div className="navbar bg-base-100 shadow-sm">
-      {/* LEFT */}
+      
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -62,7 +62,7 @@ const NavBar = () => {
             </svg>
           </div>
 
-          {/* MOBILE MENU */}
+         
           <ul
             tabIndex={0}
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-10 mt-3 w-52 p-2 shadow"
@@ -74,10 +74,7 @@ const NavBar = () => {
         <a className="text-xl font-bold text-[#1F2937]">Keep<span className="text-[#244D3F]">Keepers</span></a>
       </div>
 
-      {/* CENTER */}
       
-
-      {/* RIGHT */}
       <div className="navbar-end">
        <ul className="menu menu-horizontal px-1">{navLinks}</ul>
       </div>
