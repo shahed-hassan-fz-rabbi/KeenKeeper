@@ -68,7 +68,7 @@ const NavBar = () => {
 
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box mt-3 w-52 p-2 shadow z-50"
           >
             {navLinks}
           </ul>
@@ -76,16 +76,19 @@ const NavBar = () => {
 
 
             <Link to="/">
+            <h1 className="ml-2 text-xl md:text-2xl font-bold text-gray-800">
+           Keen <span className="text-[#244D3F]">Keeper</span>
+            </h1>
            
           
-             <img src={Logo} alt="" />
-           
+            
+             
             </Link>
         
       </div>
 
      
-      <div className="navbar-end">
+      <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 pr-3 flex gap-2">
           {navLinks}
         </ul>

@@ -6,7 +6,7 @@ KeenKeeper is a simple web app where I can keep track of my friends and stay con
 
 ## About This Project
 
-In this project, I tried to build something useful for daily life. It helps me see all my friends in one place, track interactions like calls or messages, and visualize my activity through charts.
+In this project, I tried to build something useful for everyday life. It helps me keep all my friends in one place, track interactions like calls or messages, and visualize my activity using charts.
 
 ---
 
@@ -26,34 +26,35 @@ In this project, I tried to build something useful for daily life. It helps me s
 
 ### 1. Friend Tracking
 
-I can see all my friends with their current status like on-track, overdue, or almost due. Everything is loaded from a JSON file and shown dynamically.
+I can see all my friends with their current status like on-track, overdue, or almost due. All data is loaded from a JSON file and displayed dynamically.
 
 ### 2. Interaction Timeline
 
-Whenever I click Call, Text, or Video, it gets saved and shows up in the timeline. I also added a filter option to view specific types of interactions.
+Whenever I click Call, Text, or Video, it gets saved and appears in the timeline. I also added a filter option to view interactions by type.
 
 ### 3. Stats & Analytics
 
-There is a stats page where I used a pie chart to show how many calls, texts, and video interactions I’ve made. It updates automatically based on my activity.
+There is a stats page where I used a pie chart to show the number of calls, texts, and video interactions. It updates automatically based on user activity.
 
 ---
 
-GitHub And Live Link:
+## GitHub & Live Link
 
 ```bash
 git clone https://github.com/shahed-hassan-fz-rabbi/KeenKeeper
-
-Live Link : https://transcendent-melomakarona-4969c1.netlify.app/
 ```
+
+🔗 Live Site:
+https://transcendent-melomakarona-4969c1.netlify.app/
 
 ---
 
 ## Notes
 
-I tried to keep the UI clean and simple. Also made sure routing works properly so reloading pages doesn’t break the app.
+I tried to keep the UI clean and simple. Also ensured that routing works properly so reloading any page does not break the app.
 
 ---
 
 ## Author
 
-This project was built by @Shahed-hassan-Fz-Rabbi
+This project was built by **Shahed Hassan Fz Rabbi**
